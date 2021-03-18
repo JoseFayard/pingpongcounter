@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TORNEO DEL PODER</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <header>
+        <div class="botones">
+            <button id="botonSorteo" class="pulsame">Sorteo saque inicial</button>
+            <div class="switch-button">
+                <span>¿Final del torneo?</span>
+                <!-- Checkbox -->
+                <input type="checkbox" name="switch-button" id="switch-label" class="switch-button__checkbox">
+                <!-- Botón -->
+                <label for="switch-label" class="switch-button__label"></label>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="player1" class="lados">
+            <h2 id="h2NombreJugador1">Jugador 1</h2>
+            <button id="button1">0</button>
+            <span id="restarPlayer1">-</span>
+        </section>
+        <section id="player2" class="lados">
+            <h2 id="h2NombreJugador2">Jugador 2</h2>
+            <button id="button2">0</button>
+            <span id="restarPlayer2">-</span>
+        </section>
+    </main>
+    <footer class="saques" id="footer">
+        <h2 id="juegosPlayer1">0</h2>
+        <h2>Saques restantes: <span id="contadorSaques">2</span></h2>
+        <h2 id="juegosPlayer2">0</h2>
+    </footer>
+    <div id="modalSorteo">
+        <h1>El/La primero(a) en sacar es: <strong><i id="nombreJugadorASacar"></i></strong></h1>
+    </div>
+    <div id="ganadorJuego">
+        <h1>El/La ganador(a) de la ronda <span id="numeroJuego"></span> es: <span id="jugadorGanadorDelJuego"></span></h1>
+    </div>
+    <div id="ganadorPartido">
+        <h1>El/La ganador(a) del partido es: <span id="jugadorGanadorDelPartido"></span> y avanza a la siguiente ronda.</h1>
+    </div>
+    <div id="ganadorTorneo">
+        <h1>El/La ganador(a) del partido es: <span id="jugadorGanadorDelTorneo"></span> y es el/la campeón(a) del torneo.</h1>
+    </div>
+    <div id="realizarSorteo">
+        <h1>Por favor realiza el sorteo de saque.</h1>
+    </div>
+    <div id="nombreJugador1">
+        <label for="inputNombreJugador1" class="labelNombreJugador">Ingrese el nombre del jugador #1</label>
+        <input type="text" id="inputNombreJugador1" placeholder="Jugador 1">
+        <button id="guardarNombreJugador1">Guardar</button>
+    </div>
+    <div id="nombreJugador2">
+        <label for="inputNombreJugador2" class="labelNombreJugador">Ingrese el nombre del jugador #2</label>
+        <input type="text" id="inputNombreJugador2" placeholder="Jugador 2">
+        <button id="guardarNombreJugador2">Guardar</button>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

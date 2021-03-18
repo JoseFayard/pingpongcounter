@@ -1,0 +1,274 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Expletus+Sans&display=swap');*/
+
+:root {
+    --color-green: #009688;
+    --color-red: #D32F2F;
+    --color-button: #fdffff;
+    --color-black: #555;
+    --color-player1: #4CAF50;
+    --color-player2: #2196F3;
+    --color-accent: #FF9800;
+    --color-accent-dark: #cf7c00;
+    --font-family: 'Expletus Sans', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background-color: #212121;
+    font-family: var(--font-family);
+}
+
+header {
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    height: 100px;
+}
+
+header .botones {
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    height: inherit;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header button {
+    border: none;
+    width: 400px;
+    background-color: var(--color-accent);
+    padding: 20px;
+    font-size: 25px;
+    height: 84px;
+    font-family: var(--font-family);
+    border-radius: 10px;
+    text-transform: uppercase;
+}
+
+header button[disabled=disabled],
+button:disabled {
+    background-color: grey;
+    color: #000;
+    cursor: not-allowed;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.lados {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10px;
+    padding: 20px 0;
+    width: 100%;
+}
+
+
+.lados h2 {
+    display: block;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.lados button {
+    display: block;
+    width: 60%;
+    padding: 30px;
+    font-size: 180px;
+    font-family: var(--font-family);
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0px 0px 19px 1px rgba(0, 0, 0, 0.43);
+}
+
+.lados span {
+    line-height: 0px;
+    font-size: 50px;
+    background-color: var(--color-red);
+    margin-top: 20px;
+    padding: 30px;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.saques {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 0px 40px;
+}
+
+.saques h2 {
+    display: block;
+    padding: 30px;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+#player1 button {
+    background-color: var(--color-player1);
+}
+
+#player2 button {
+    background-color: var(--color-player2);
+}
+
+#player1 h2 {
+    color: var(--color-player1);
+}
+
+#player2 h2 {
+    color: var(--color-player2);
+}
+
+#modalSorteo,
+#ganadorJuego,
+#ganadorPartido,
+#ganadorTorneo,
+#realizarSorteo,
+#partidoFinal,
+#nombreJugador1,
+#nombreJugador2 {
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #212121;
+    color: #fff;
+    z-index: 200;
+    font-size: 40px;
+    text-align: center;
+    visibility: hidden;
+    padding: 30px;
+}
+
+#nombreJugador1 {
+    visibility: visible;
+}
+
+#inputNombreJugador1, #inputNombreJugador2 {
+    display: block;
+    padding: 30px;
+    width: 50%;
+    font-size: 20px;
+    font-family: var(--font-family);
+    border-radius: 20px;
+    border: 2px solid #fff;
+    text-transform: uppercase;
+}
+
+#guardarNombreJugador1, #guardarNombreJugador2 {
+    display: block;
+    width: 50%;
+    margin-top: 30px;
+    font-size: 20px;
+    padding: 30px;
+    border-radius: 20px;
+    border: none;
+    font-family: var(--font-family);
+    text-transform: uppercase;
+    background-color: var(--color-green);
+    color: #fff;
+}
+
+#nombreJugadorASacar,
+#jugadorGanadorDelJuego,
+#jugadorGanadorDelPartido,
+#jugadorGanadorDelTorneo {
+    color: var(--color-accent);
+    text-transform: capitalize;
+}
+
+.pulsame {
+    animation: .9s infinite hola;
+}
+
+.labelNombreJugador {
+    margin-bottom: 20px;
+}
+
+/*Estilos botón switch*/
+
+.switch-button {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /*border: 2px solid var(--color-button);*/
+    padding: 15px;
+    border-radius: 10px;
+    /*background-color: var(--color-button);*/
+    width: 400px;
+}
+
+.switch-button span {
+    font-size: 25px;
+    color: #fff;
+}
+
+.switch-button .switch-button__checkbox {
+    display: none;
+}
+
+.switch-button .switch-button__label {
+    background-color: var(--color-red);
+    width: 5rem;
+    height: 3rem;
+    border-radius: 3rem;
+    display: inline-block;
+    position: relative;
+}
+
+.switch-button .switch-button__label:before {
+    transition: .2s;
+    display: block;
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--color-button);
+    content: '';
+    border-radius: 50%;
+    box-shadow: inset 0px 0px 0px 1px var(--color-black);
+}
+
+.switch-button .switch-button__checkbox:checked+.switch-button__label {
+    background-color: var(--color-green);
+}
+
+.switch-button .switch-button__checkbox:checked+.switch-button__label:before {
+    transform: translateX(2rem);
+}
+
+
+@keyframes hola {
+    0% {
+        background-color: var(--color-accent);
+    }
+    50% {
+        background-color: var(--color-accent-dark);
+    }
+    100% {
+        background-color: var(--color-accent);
+    }
+}
